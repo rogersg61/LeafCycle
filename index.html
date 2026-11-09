@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeafCycle | Renewable Natural Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        leaf: { light: '#72c842', DEFAULT: '#4db848', dark: '#2e7d32' },
+                        dark: { DEFAULT: '#0a0a0a', card: '#141414' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased bg-dark text-gray-200 selection:bg-leaf selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center group">
+                        <img class="h-16 w-auto transition-transform duration-300 group-hover:scale-105" src="logo.png">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#process" class="nav-link">The Process</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#program" class="bg-leaf hover:bg-leaf-light text-white px-5 py-2 rounded-full text-sm font-semibold transition-all">Our Program</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-card border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About Us</a>
+            <a href="#process" class="mobile-link">The Process</a>
+            <a href="#products" class="mobile-link">Products</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#program" class="block bg-leaf text-center text-white px-5 py-2 rounded-full text-base font-semibold">Our Program</a>
+        </div>
+    </nav>
+
+    <!-- Home / Overview Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center relative pt-20 overflow-hidden section-offset">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[80%] h-[500px] bg-leaf/10 blur-[120px] rounded-full pointer-events-none"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Nature's Alternative to <br>
+                <span class="gradient-text">A Plastic Planet</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-400 mx-auto mb-10 leading-relaxed">
+                Welcome to LeafCycle. We are dedicated to replacing everyday non-renewable items with renewable natural resources. Scroll down to see how we are changing the world, one leaf at a time.
+            </p>
+            <!-- IMAGE PLACEHOLDER 1 -->
+            <img src="img1.jpeg" alt="Hero Overview" class="w-full max-w-4xl mx-auto h-64 md:h-96 object-cover bg-gray-800 rounded-3xl border border-white/10 shadow-2xl">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-dark-card section-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">The Problem We Solve</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-400 leading-relaxed">
+                    Everyday items like plastic baggies and standard paper towels rely on non-renewable resources that devastate our environment. Plastics can burn or persist in landfills for over a century.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- IMAGE PLACEHOLDER 2 -->
+                <img src="img2.jpeg" alt="Plastic Pollution" class="w-full h-64 object-cover bg-gray-800 rounded-2xl border border-white/5">
+                <!-- IMAGE PLACEHOLDER 3 -->
+                <img src="img3.jpeg" alt="Leaf Solution" class="w-full h-64 object-cover bg-gray-800 rounded-2xl border border-white/5">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Metrics / Inequalities Section -->
+    <section id="metrics" class="py-24 section-offset border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Environmental Project Metrics</h2>
+            <p class="text-gray-400 mb-10">Our goals and limits defined mathematically for our initiative.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-left">
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">1. Plastic Lifespan (yrs): p &gt; 100</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">2. Volunteer Hours: h &ge; 40</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">3. Scholarship Value ($): s &ge; 1000</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">4. Carbon Saved (lbs): c &ge; 500</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">5. Leaves Used: L &gt; 10000</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">6. Waste Produced (kg): w &le; 0.5</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">7. Camp Attendees: a &ge; 20</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">8. Deforestation Rate: d &le; 0</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">9. Compost Time (mo): t &lt; 3</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">10. Baggies Replaced: b &ge; 150</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">11. Water Saved (gal): W &gt; 200</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">12. Energy Used (kWh): e &lt; 50</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">13. Student Age: A &ge; 14</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">14. Toxicity Level: T &le; 0</div>
+                <div class="p-4 bg-dark-card rounded-xl border border-leaf/20 text-leaf-light font-mono text-sm">15. Renewability (%): R &ge; 99</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Process Section -->
+    <section id="process" class="py-24 section-offset bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 gradient-text">How We Do It</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-dark-card rounded-2xl border border-white/5">
+                    <!-- IMAGE PLACEHOLDER 4 -->
+                    <img src="img4.jpeg" alt="Source Step" class="w-full h-48 object-cover bg-gray-800 rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-3">1. Source</h3>
+                    <p class="text-gray-400">Gathering fallen leaves and natural sources.</p>
+                </div>
+                <div class="p-6 bg-dark-card rounded-2xl border border-white/5">
+                    <!-- IMAGE PLACEHOLDER 5 -->
+                    <img src="img5.jpeg" alt="Process Step" class="w-full h-48 object-cover bg-gray-800 rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-3">2. Process</h3>
+                    <p class="text-gray-400">Pressing and binding natural fibers.</p>
+                </div>
+                <div class="p-6 bg-dark-card rounded-2xl border border-white/5">
+                    <!-- IMAGE PLACEHOLDER 6 -->
+                    <img src="img6.jpeg" alt="Replace Step" class="w-full h-48 object-cover bg-gray-800 rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-3">3. Replace</h3>
+                    <p class="text-gray-400">Replacing household plastics with earth-safe goods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-dark-card section-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 gradient-text">Our Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="p-8 border border-leaf/30 rounded-3xl bg-dark text-left">
+                    <!-- IMAGE PLACEHOLDER 7 -->
+                    <img src="img7.jpeg" alt="Leaf Baggies" class="w-full h-56 object-cover bg-gray-800 rounded-xl mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">Leaf Baggies</h3>
+                    <p class="text-gray-400">Our baggies are crafted entirely out-of-leaves. Safe, secure, and compostable.</p>
+                </div>
+                <div class="p-8 border border-leaf/30 rounded-3xl bg-dark text-left">
+                    <!-- IMAGE PLACEHOLDER 8 -->
+                    <img src="mistake.jpeg" alt="Natural Paper Towels" class="w-full h-56 object-cover bg-gray-800 rounded-xl mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">Natural Paper Towels</h3>
+                    <p class="text-gray-400">Made from renewable natural sources. Highly absorbent and completely earth-friendly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="py-24 section-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Our Impact Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- IMAGE PLACEHOLDERS 9 to 16 -->
+                <img src="img9.jpeg" alt="Gallery 1" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img10.jpeg" alt="Gallery 2" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img11.jpeg" alt="Gallery 3" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img12.jpeg" alt="Gallery 4" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img13.jpeg" alt="Gallery 5" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img14.jpeg" alt="Gallery 6" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img15.jpeg" alt="Gallery 7" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+                <img src="img16.jpeg" alt="Gallery 8" class="w-full h-40 object-cover bg-gray-800 rounded-xl hover:scale-105 transition-transform">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Program Section (Summer Camp) -->
+    <section id="program" class="py-24 bg-dark-card section-offset relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-leaf/10 blur-[100px] rounded-full pointer-events-none"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 text-left">
+                <span class="text-leaf font-semibold tracking-wider uppercase text-sm mb-2 block">Volunteer & Lead</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Summer Camp</h2>
+                <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                    High school students can get volunteer hours while making a real impact. Join us to learn about sustainability and help manufacture out-of-leaves products.
+                </p>
+                <div class="bg-dark border border-leaf/50 p-6 rounded-3xl mb-10 glow-effect">
+                    <h3 class="text-2xl font-bold text-white mb-2">$1,000 Scholarship</h3>
+                    <p class="text-gray-400 mb-6">One lucky participant will be awarded a $1,000 scholarship towards their environmental studies.</p>
+                    <button id="apply-btn" class="bg-white text-dark px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors w-full sm:w-auto">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                <!-- IMAGE PLACEHOLDERS 17 to 19 -->
+                <img src="img17.jpeg" alt="Camp 1" class="w-full h-48 object-cover bg-gray-800 rounded-xl">
+                <img src="img18.jpeg" alt="Camp 2" class="w-full h-48 object-cover bg-gray-800 rounded-xl">
+                <img src="img19.jpeg" alt="Camp 3" class="w-full h-48 object-cover bg-gray-800 rounded-xl col-span-2">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-dark py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- IMAGE PLACEHOLDER 20 -->
+            <img src="img20.jpeg" alt="Footer Banner" class="w-full max-w-2xl mx-auto h-32 object-cover bg-gray-800 rounded-xl mb-8 opacity-50">
+            <p class="text-gray-500 text-sm">&copy; 2026 LeafCycle. Protecting the planet from 100-year plastics.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
